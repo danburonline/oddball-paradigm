@@ -22,11 +22,8 @@ towards a cross centered on the screen).
 ### The tasks
 
 - Sketch the experiment graphically
-- Design and implement the experimental task in a webApp using any frontend web development
-  frameworks, the experiment starts with a button press and ends after 2 minutes with the screen text
-  “Experiment complete”
-- What do you think is important for designing an experiment when you care about excellent signal
-  quality? (1 or 2 sentences)
+- Design and implement the experimental task in a webApp using any frontend web development frameworks, the experiment starts with a button press and ends after 2 minutes with the screen text “Experiment complete”
+- What do you think is important for designing an experiment when you care about excellent signal quality? (1 or 2 sentences)
 
 ## Quick Starting Guides
 
