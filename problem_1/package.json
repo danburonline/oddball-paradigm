@@ -15,9 +15,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "next": "11.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-countdown": "^2.3.2",
+    "react-dom": "17.0.2",
+    "tone": "^14.7.77"
   },
   "devDependencies": {
     "@types/react": "17.0.17",

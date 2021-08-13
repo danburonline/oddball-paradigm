@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
+import Countdown from 'react-countdown'
 
 const ExperimentView = dynamic(() => import('../src/views/experiment'), {
   ssr: false
@@ -17,6 +18,10 @@ export default function Home(): JSX.Element {
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
       <main>
+        <h3>
+          <b>Time remaining</b>
+        </h3>
+        <Countdown date={Date.now() + 100000} />
         <ExperimentView />
       </main>
     </>
