@@ -30,3 +30,13 @@ There are several main tasks to complete this assessment:
 
 - [ ] Scribbles for the idea.
 - [ ] Attract customers/investors: 1–2 sentences.
+
+### Personal Goals
+
+- [ ] Simple frontend responsiveness.
+- [ ] Global state management on the frontend.
+- [ ] Logging on the backend.
+- [ ] CORS on the backend.
+- [ ] Jest backend unit tests.
+- [ ] Cypress frontend tests.
+- [ ] Storybook stateless UI components on the frontend.
