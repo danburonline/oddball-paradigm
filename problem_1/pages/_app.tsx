@@ -1,7 +1,8 @@
-import '../styles/globals.scss'
+import 'tailwindcss/tailwind.css'
 import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+function IDUN_SPA({ Component, pageProps }: AppProps): JSX.Element {
   return <Component {...pageProps} />
 }
-export default MyApp
+
+export default IDUN_SPA
