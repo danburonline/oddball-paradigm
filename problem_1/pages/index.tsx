@@ -1,9 +1,13 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+
 export default function Home(): JSX.Element {
+  const router = useRouter()
+
   return (
     <>
       <Head>
-        <title>IDUN – Oddball Experiment</title>
+        <title>IDUN – Frontend Assessment</title>
         <meta
           name='description'
           content='This is the example frontend for the fullstack engineer assessment for IDUN Technologies. It demonstrates a possible implementation for the Oddball Experiment.'
@@ -33,14 +37,14 @@ export default function Home(): JSX.Element {
           </ul>
           <div
             aria-roledescription='button'
-            onClick={() => console.log('Clicked')}
+            onClick={() => router.push('/experiment')}
           >
             Start experiment
           </div>
         </main>
         <aside
           id='aside-image'
-          className='w-1/2 h-screen bg-black bg-hero-image'
+          className='w-1/2 h-screen bg-black bg-center bg-no-repeat bg-hero-image'
         ></aside>
       </section>
     </>
