@@ -32,6 +32,9 @@ module.exports = {
       'not-allowed': 'not-allowed',
       crosshair: 'crosshair',
       'zoom-in': 'zoom-in'
-    }
+    },
+    backgroundImage: () => ({
+      'hero-image': "url('/img/brain.jpeg')"
+    })
   }
 }
