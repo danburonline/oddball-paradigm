@@ -16,7 +16,7 @@ There are several main tasks to complete this assessment:
 
 - [ ] Implement a frontend Oddball experiment with Sound.js.
 - [ ] Create wireframes for the experiment/research design.
-- [ ] Instructions 1–2 sentences.
+- [x] Instructions 1–2 sentences.
 
 ### The backend with a REST API
 
@@ -33,10 +33,11 @@ There are several main tasks to complete this assessment:
 
 ### Personal Goals
 
-- [ ] Simple frontend responsiveness.
-- [ ] Global state management on the frontend.
+- [x] Simple screen designs (desktop and mobile).
+- [ ] Jest backend unit tests.
 - [ ] Logging on the backend.
 - [ ] CORS on the backend.
-- [ ] Jest backend unit tests.
+- [ ] Simple frontend responsiveness.
+- [ ] Global state management on the frontend (Zustand).
 - [ ] Cypress frontend tests.
 - [ ] Storybook stateless UI components on the frontend.
