@@ -1,12 +1,11 @@
 import Feature from './feature.model'
 
 export default class FeatureService {
-  static getAllFeatures = async (): Promise<any> => {
-    const features = await Feature.find()
-    return features
+  static getAllFeatures = async (): Promise<unknown> => {
+    return Feature.find()
   }
 
-  static createFeature = async (feature: any): Promise<any> => {
+  static createFeature = async (feature: any): Promise<unknown> => {
     const feat: any = new Feature()
     feat.feature_0 = feature.feature_0
     feat.feature_1 = feature.feature_1
@@ -22,7 +21,7 @@ export default class FeatureService {
     return feat
   }
 
-  static getFeature = async (numb: any): Promise<any> => {
+  static getFeature = async (numb: string): Promise<unknown> => {
     const getAllFeatures = await Feature.find({}).select(`feature_${numb}`)
 
     if (getAllFeatures) {
@@ -38,14 +37,20 @@ export default class FeatureService {
     }
   }
 
-  static getSubFeature = async (sub: any, featureNumb: any): Promise<any> => {
+  static getSubFeature = async (
+    sub: string,
+    featureNumb: string
+  ): Promise<unknown> => {
     const getAllSubjects = await Feature.find().skip(parseInt(sub)).limit(1)
     return getAllSubjects.length
       ? { feature: getAllSubjects[0][`feature_${featureNumb}`] }
       : 'Error'
   }
 
-  static updateOneSubject = async (subId: any, data: any): Promise<any> => {
+  static updateOneSubject = async (
+    subId: string,
+    data: any
+  ): Promise<unknown> => {
     const findSubject = await Feature.findOne({ _id: subId })
 
     if (findSubject) {
@@ -59,7 +64,7 @@ export default class FeatureService {
     }
   }
 
-  static updateSubject = async (sub: any, data: any): Promise<any> => {
+  static updateSubject = async (sub: string, data: any): Promise<unknown> => {
     const getNumber = sub.split('-')
     const findSubject = await Feature.find()
       .skip(parseInt(getNumber[0]))

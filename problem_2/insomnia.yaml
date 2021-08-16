@@ -9,7 +9,7 @@ resources:
     created: 1629008211304
     url: http://localhost:8080/api/feature/5
     name: Get Features of all Subjects
-    description: ""
+    description: ''
     method: GET
     body: {}
     parameters: []
@@ -29,7 +29,7 @@ resources:
     modified: 1629117308407
     created: 1629008203951
     name: IDUN Assessment
-    description: ""
+    description: ''
     scope: collection
     _type: workspace
   - _id: req_cb6eb2f5bebf45989709baae1ef7f183
@@ -38,7 +38,7 @@ resources:
     created: 1629017471285
     url: http://localhost:8080/api/feature/sub/100/feature/5
     name: Get one Feature of one Subject
-    description: ""
+    description: ''
     method: GET
     body: {}
     parameters: []
@@ -59,7 +59,7 @@ resources:
     created: 1629032656650
     url: http://localhost:8080/api/feature/update/195-196
     name: Bulk update Subjects
-    description: ""
+    description: ''
     method: POST
     body:
       mimeType: application/json
@@ -88,7 +88,7 @@ resources:
     created: 1629051341392
     url: http://localhost:8080/api/feature/updateOne/611a59be4d21f3f78b88013a
     name: Update one Subject
-    description: ""
+    description: ''
     method: POST
     body:
       mimeType: application/json
@@ -117,7 +117,7 @@ resources:
     created: 1629052076070
     url: http://localhost:8080/api/feature/create
     name: Create a new Feature
-    description: ""
+    description: ''
     method: POST
     body:
       mimeType: application/json
@@ -172,6 +172,6 @@ resources:
     modified: 1629008203958
     created: 1629008203958
     fileName: IDUN
-    contents: ""
+    contents: ''
     contentType: yaml
     _type: api_spec

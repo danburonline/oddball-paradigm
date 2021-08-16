@@ -1,5 +1,4 @@
 {
-  "include": ["src/**/*"],
   "compilerOptions": {
     "module": "commonjs",
     "lib": ["es6"],
@@ -11,5 +10,6 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "strictPropertyInitialization": false
-  }
+  },
+  "include": ["src/**/*"]
 }
