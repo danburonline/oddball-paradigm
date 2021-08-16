@@ -12,9 +12,21 @@ In the final step, we would like to design a demo space for customers to present
 - [x] Sketch the demo space graphically
 - [x] What do you think are important factors that would highly attract customers in highlighting the hardware and software?
 
-## Demo Space
+## 1. Demo Space
 
-## Attract Customer
+I would set up a digital demo room with the results of a BCI/IDUN DRYODE Guardian Hackathon: Developers/Engineers/Tinkers with a wide range of skills and experience create different application products using the IDUN BCI, Brain API and IDUN Software Stack. These people compete against each other, and the most innovative technologies and ideas are chosen as winners. These ideas are presented on the Neurointelligence platform as live demo products/tiny but yet impressive samples.
+
+For example, I can mention the idea for my Bachelor project, which could be a possible result of such a hackathon: Mind Racing, a web-based 3D racing game that you can control only with your thoughts. Users can compete with each other via the Mind Racing website and race against users worldwide in real-time. The goal is to steer a 3D figure through a path with obstacles (similar to TempleRun). If you bump into an obstacle, you lose speed. There is also a public leaderboard with the highest scores and other gamification factors.
+
+This demo product perfectly demonstrates a potential use case for the gaming industry and accessibility for the web. It is also a practical and fun way to illustrate the Internet of Humans, where we can connect each other's brains to achieve goals (even if as simple as having fun playing a game). When marketed as a sub-brand of IDUN as "one of the demos on our neurointelligence platform", it will be one of the possible – even award-winning – demo products that will attract customers, potential clients, investors, and fans (I compare this idea to the growing game developer traction inside Tesla cars e.g.).
+
+**Additionally:** To make these demo products more accessible, I would create walkthroughs and an on-site demo room with provided Guardian BCIs for visitors (like the VR room or demo space in the SAE Institute). E.g. another idea: A fully connected smart home (lights, fans, smart mirror, etc.) that all adapt to the user's mental state coming into the room.
+
+---
+
+## 2. Attract Customer
+
+![Footsteps on the moon: The result of a moonshot project (Apollo 11)](./img/moonshot.jpeg)
 
 **Q:** What do you think are important factors that would highly attract customers in highlighting the hardware and software?
 
@@ -43,7 +55,8 @@ Last but not least, you have to show that BCIs are coming – it is an inevitabl
 
 **Inspirations:**
 
-- <https://deepmind.com>
 - <https://x.company>
 - <https://openai.com>
+- <https://deepmind.com>
 - <https://www.unrealengine.com>
+- <https://www.spacex.com/vehicles/starship>
