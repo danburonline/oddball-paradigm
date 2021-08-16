@@ -29,7 +29,7 @@ There are several main tasks to complete this assessment:
 ### Ideation to showcase the IDUN BCI
 
 - [ ] Scribbles for the idea.
-- [ ] Attract customers/investors: 1–2 sentences.
+- [x] Attract customers/investors: A few sentences.
 
 ### Personal Goals
 
