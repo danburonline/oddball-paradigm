@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-undef
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: false,
@@ -32,6 +31,9 @@ module.exports = {
       'not-allowed': 'not-allowed',
       crosshair: 'crosshair',
       'zoom-in': 'zoom-in'
-    }
+    },
+    backgroundImage: () => ({
+      'hero-image': "url('/img/brain.jpeg')"
+    })
   }
 }
