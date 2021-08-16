@@ -23,8 +23,8 @@ There are several main tasks to complete this assessment:
 - [x] JSON in a MongoDB database.
 - [x] Create a REST API with Node.js.
 - [x] Response codes from the backend.
-- [ ] Deployment: 1–2 sentences.
-- [ ] Scalability: 1–2 sentences.
+- [x] Deployment: 1–2 sentences.
+- [x] Scalability: 1–2 sentences.
 
 ### Ideation to showcase the IDUN BCI
 
@@ -37,7 +37,7 @@ There are several main tasks to complete this assessment:
 - [x] Logging on the backend.
 - [x] CORS on the backend.
 - [ ] Simple frontend responsiveness.
-- [ ] Global state management on the frontend (Zustand).
 - [ ] Jest backend unit tests.
 - [ ] Cypress frontend tests.
+- [ ] Global state management on the frontend (Zustand).
 - [ ] Storybook stateless UI components on the frontend.

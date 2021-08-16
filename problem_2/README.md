@@ -15,6 +15,18 @@ Now, the data that was recorded from an experiment should be transformed such th
 - [x] Describe the steps on how you want to deploy your application
 - [x] What do you consider relevant factors for the design of a scalable API design? (1 or 2 sentences)
 
+### Questions and answers
+
+**Q:** Describe the steps on how you want to deploy your application[?]
+
+**A:** So far, everything is simply containerised via Docker, so it can all be deployed to any cloud computing provider that supports Docker image deployment. I prefer to deploy it on Google Cloud Platform Cloud Run, as that's where I've had the smoothest experience. The MongoDB database is also currently just a free sandbox tier; I would turn it into a production-ready tier on GCP to easily connect the two services. Currently, it is also possible to access the database from any IP address; I would need to change that to a more secure way with limited access. The most simple form of deployment that I would utilise at this moment with this scope would be an CI/CD workflow with automated unit and E2E tests via GitHub Actions. If the pipelines pass, the Docker images will get deployed to a Google Container Registry.
+
+---
+
+**Q:** What do you consider relevant factors for the design of a scalable API design?
+
+**A:** If I had more time for this task, I would prefer GraphQL over a REST API due to many factors (mainly DX; TypeDoc/automated documentation, schema fetching, code generation, etc.). In addition, I would say that one of the most important factors is that I would use a microservice architecture because I want to be able to scale easily (in terms of cloud computing and tech stacks): all services are federated in a single GraphQL endpoint, and the whole backend is stateless and managed via Terraform (Infrastructure as Code).
+
 ## 🚀 Guides
 
 ### Run the build server
