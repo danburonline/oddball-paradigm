@@ -4,7 +4,6 @@ import FeatureService from './feature.service'
 
 class FeatureController implements Controller {
   path = '/feature'
-
   route = Router()
 
   constructor() {
@@ -17,7 +16,6 @@ class FeatureController implements Controller {
     this.route.get('/:numb', this.getFeature)
     this.route.post('/update/:numb', this.bulkUpdate)
     this.route.post('/updateOne/:numb', this.updateOneSubject)
-    // this.route.get("/bulk/:numb", this.updateSubject);
     this.route.get('/sub/:numb/feature/:featureNumb', this.getSub)
   }
 
@@ -37,12 +35,6 @@ class FeatureController implements Controller {
     const feat = await FeatureService.getFeature(numb)
     res.status(HttpStatusEnum.SUCCESS).send(feat)
   }
-
-  /*   async updateSubject(req: Request, res: Response): Promise<void> {
-    const numb = req.params.numb;
-    const feat = await FeatureService.updateSubject(numb);
-    res.status(HttpStatusEnum.SUCCESS).send(feat);
-  } */
 
   async getSub(req: Request, res: Response): Promise<void> {
     const numb = req.params.numb

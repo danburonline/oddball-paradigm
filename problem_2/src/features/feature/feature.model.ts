@@ -1,5 +1,4 @@
 import mongoose from 'mongoose'
-import IFeature from './feature.interface'
 
 const FeatureSchema = new mongoose.Schema({
   feature_0: {

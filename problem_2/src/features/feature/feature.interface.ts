@@ -1,4 +1,4 @@
-import { Document } from "mongoose";
+import { Document } from 'mongoose'
 
 export default interface IFeature extends Document {
   feature_0: number
