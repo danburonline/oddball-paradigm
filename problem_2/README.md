@@ -14,3 +14,18 @@ Now, the data that was recorded from an experiment should be transformed such th
 - [x] Demonstrate the usage of HTTP responses with codes: 200, 404, 500
 - [x] Describe the steps on how you want to deploy your application
 - [x] What do you consider relevant factors for the design of a scalable API design? (1 or 2 sentences)
+
+## 🚀 Guides
+
+### Run the build server
+
+- Build the Docker image with `docker build . -t idun-backend:latest`.
+- Run the created image with `docker run -p 8080:8080 idun-backend`.
+- Access the site on <http://localhost:8080>.
+
+### Run the development server
+
+- Install all dependencies with `yarn`.
+- Start the development server `yarn dev`.
+- Access the API endpoint on <http://localhost:8080/api>.
+- Import the `insomnia.yaml` file to [Insomnia](https://insomnia.rest/) to use the API.

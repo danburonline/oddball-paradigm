@@ -3,10 +3,10 @@ import app from './app'
 
 connectDB()
   .then(() => {
-    console.info(`✅ Connected To Database`)
+    console.info(`✅ MongoDB database is connected`)
   })
   .catch((err: string) => {
-    console.error('Error Connecting To Database', err)
+    console.error('Error connecting to the MongoDB database', err)
   })
 
 app.listen(process.env.PORT, () => {
