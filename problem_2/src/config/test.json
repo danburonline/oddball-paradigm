@@ -1,0 +1,12 @@
+{
+  "db": {
+    "port": "27017",
+    "host": "localhost",
+    "name": "keyDB-test",
+    "user": "",
+    "password": ""
+  },
+  "server": {
+    "port": "8999"
+  }
+}

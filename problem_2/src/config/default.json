@@ -1,0 +1,14 @@
+{
+  "db": {
+    "port": "27017",
+    "host": "localhost",
+    "name": "keyDB",
+    "user": "",
+    "password": "",
+    "replicaSet": "",
+    "URI": ""
+  },
+  "server": {
+    "port": "8999"
+  }
+}
