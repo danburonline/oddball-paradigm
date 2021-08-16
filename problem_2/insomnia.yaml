@@ -1,0 +1,177 @@
+_type: export
+__export_format: 4
+__export_date: 2021-08-16T12:35:57.582Z
+__export_source: insomnia.desktop.app:v2021.4.1
+resources:
+  - _id: req_a035e289f73d440794c56ca85b707afb
+    parentId: wrk_8f654b6e808d4a8d8c0745f0c7746366
+    modified: 1629117076051
+    created: 1629008211304
+    url: http://localhost:8080/api/feature/5
+    name: Get Features of all Subjects
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1629052076120
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_8f654b6e808d4a8d8c0745f0c7746366
+    parentId: null
+    modified: 1629117308407
+    created: 1629008203951
+    name: IDUN Assessment
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_cb6eb2f5bebf45989709baae1ef7f183
+    parentId: wrk_8f654b6e808d4a8d8c0745f0c7746366
+    modified: 1629117267756
+    created: 1629017471285
+    url: http://localhost:8080/api/feature/sub/100/feature/5
+    name: Get one Feature of one Subject
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1629052076170
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_056449786c25445fae437292892d6e13
+    parentId: wrk_8f654b6e808d4a8d8c0745f0c7746366
+    modified: 1629117287105
+    created: 1629032656650
+    url: http://localhost:8080/api/feature/update/195-196
+    name: Bulk update Subjects
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"feature_0": "0.0123456789"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_0da586e506ee46189448527c1fa03b57
+    authentication: {}
+    metaSortKey: -1625534351102.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_fcccbe75b94a4beea48a1a2fe07459e0
+    parentId: wrk_8f654b6e808d4a8d8c0745f0c7746366
+    modified: 1629117281715
+    created: 1629051341392
+    url: http://localhost:8080/api/feature/updateOne/611a59be4d21f3f78b88013a
+    name: Update one Subject
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"feature_0": "0.0123456789"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_0da586e506ee46189448527c1fa03b57
+    authentication: {}
+    metaSortKey: -1625286218230.5625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f6811785c29d4e43bac2ddeda55ac15b
+    parentId: wrk_8f654b6e808d4a8d8c0745f0c7746366
+    modified: 1629117277107
+    created: 1629052076070
+    url: http://localhost:8080/api/feature/create
+    name: Create a new Feature
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"feature_0": "0.0123456789",
+        	"feature_1": "0.0123456789",
+        	"feature_2": "0.0123456789",
+        	"feature_3": "0.0123456789",
+        	"feature_4": "0.0123456789",
+        	"feature_5": "0.0123456789",
+        	"feature_6": "0.0123456789",
+        	"feature_7": "0.0123456789",
+        	"feature_8": "0.0123456789",
+        	"feature_9": "0.0123456789"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_762d13a0072746afb59d88e3052e49b4
+    authentication: {}
+    metaSortKey: -1625286218180.5625
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_1d69f0cc2ded5fdb0b100327111dd09b9cd532a7
+    parentId: wrk_8f654b6e808d4a8d8c0745f0c7746366
+    modified: 1629008204189
+    created: 1629008204189
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1629008204189
+    _type: environment
+  - _id: jar_1d69f0cc2ded5fdb0b100327111dd09b9cd532a7
+    parentId: wrk_8f654b6e808d4a8d8c0745f0c7746366
+    modified: 1629008204192
+    created: 1629008204192
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_32c33e7a0561482082eba4cd2880526a
+    parentId: wrk_8f654b6e808d4a8d8c0745f0c7746366
+    modified: 1629008203958
+    created: 1629008203958
+    fileName: IDUN
+    contents: ""
+    contentType: yaml
+    _type: api_spec

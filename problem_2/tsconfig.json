@@ -1,0 +1,15 @@
+{
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": ["es6"],
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "dist",
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "strictPropertyInitialization": false
+  }
+}
