@@ -28,7 +28,8 @@ There are several main tasks to complete this assessment:
 
 ### Ideation to showcase the IDUN BCI
 
-- [ ] Scribbles for the idea.
+- [ ] Scribbles for the demo space ideas.
+- [x] A few sentences for the demo space ideas..
 - [x] Attract customers/investors: A few sentences.
 
 ### Personal Goals
