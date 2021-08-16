@@ -15,7 +15,7 @@ There are several main tasks to complete this assessment:
 ### Frontend/Oddball experiment
 
 - [ ] Implement a frontend Oddball experiment with Sound.js.
-- [ ] Create wireframes for the experiment/research design.
+- [x] Create wireframes for the experiment/research design.
 - [x] Instructions 1–2 sentences.
 
 ### The backend with a REST API
