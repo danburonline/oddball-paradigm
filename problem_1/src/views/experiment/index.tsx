@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import * as Tone from 'tone'
-import NoteButtons from './components/NoteButtons'
+import classNames from 'classnames'
 
 function GenerateGrid(columnsCount: number, randomness: number) {
   const grid = []
@@ -77,9 +77,27 @@ export default function Experiment(): JSX.Element {
   return (
     <div className='App'>
       <div className='note-wrapper'>
-        {console.log('does this render too?')}
-        <NoteButtons notes={grid} currentColumn={currentColumn} />
+        {grid.map(({ note, isActive }, columnIndex) => (
+          <div
+            className={classNames('note-column', {
+              'note-column--active': currentColumn === columnIndex
+            })}
+            key={columnIndex + 'column'}
+          >
+            {console.log(note)}
+            <NoteButton note={note} isActive={isActive} key={columnIndex} />
+          </div>
+        ))}
       </div>
     </div>
+  )
+}
+
+const NoteButton = ({ note, isActive, ...rest }) => {
+  const classes = isActive ? 'note note--active' : 'note'
+  return (
+    <button className={classes} {...rest}>
+      {note}
+    </button>
   )
 }
