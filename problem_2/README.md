@@ -43,4 +43,17 @@ Now, the data that was recorded from an experiment should be transformed such th
 - Compile the TypeScript code with `yarn build`.
 - Start the hot-reload development server with `yarn dev`.
 - Access the API endpoint on <http://localhost:8080/api>.
-- Import the `insomnia.yaml` file to [Insomnia](https://insomnia.rest/) to use the API.
+- Import the `insomnia.yaml` file to [Insomnia](https://insomnia.rest) to use the API.
+
+## 🔗 Resources
+
+- [Insomnia GUI API Client](https://insomnia.rest)
+- [Insomnia Config File](insomnia.yaml)
+- [.env Template File](.env.template)
+
+## 🧩 Remarks
+
+- Be sure that the `problem_2` directory has a `.env` file with the following variables: `PORT` and `DB_URI`. If you don't provide these environment variables the `Dockerfile` as well as the compilation process won't work.
+- If you compile the backend with `yarn build`, you will get a `dist` folder with the compiled code and a `logs` folder with the logs.
+- There are some edge cases where the API doesn't work as expected. So far I've implemented the most critical features for a working example REST API.
+- For a small documentation I recommend just downloading Insomnia and importing the `insomnia.yaml` file. It gives you a good overview for all the endpoints.

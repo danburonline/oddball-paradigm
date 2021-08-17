@@ -37,3 +37,17 @@ Neuroimaging studies are typically small in sample size. Having a system like th
 - Install all dependencies with `yarn`.
 - Start the hot-reload NextJS development server with `yarn dev`.
 - Access the site on <http://localhost:3000>.
+
+## 🔗 Resources
+
+- [Desktop Screendesign](./ideation/screendesign/desktop)
+- [Mobile Screendesign](./ideation/screendesign/mobile)
+- [Figma Screendesign File](./ideation/screendesign/screendesign.fig)
+- [Wireframes](./ideation/wireframes)
+- [Figma Wireframes File](./ideation/wireframes/wireframes.fig)
+
+## 🧩 Remarks
+
+- The frontend has only been tested on a MacBook Pro with macOS Big Sur 11.5.2 inside the Brave, Chromium and Edge browsers.
+- There are still some issues with the Synthesizer cleanup when you leave the experiment page => would need some rework.
+- The frontend has been optimised for a 15 inch retina display. Have a look at the screen designs for the mobile version.
