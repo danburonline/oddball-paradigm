@@ -20,6 +20,8 @@ export default function Experiment(): JSX.Element {
   const [grid] = useState(useMemo(() => GenerateGrid(30, 0.9), []))
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentColumn, setCurrentColumn] = useState(null)
+  const [isRandom, setIsRandom] = useState(true)
+  const [notShowing, setNotShowing] = useState(false)
   const synth = new Tone.PolySynth().toDestination()
 
   const PlayMusic = async () => {
@@ -60,13 +62,20 @@ export default function Experiment(): JSX.Element {
     await Sequencer.start()
     await Tone.Transport.start()
 
-    // stop the sounds after after 30 seconds
+    setTimeout(async () => {
+      setIsRandom(true)
+    }, 1000 * 30)
+
+    setTimeout(async () => {
+      setNotShowing(true)
+    }, 1000 * 60)
+
     setTimeout(async () => {
       await Tone.Transport.stop()
       await Sequencer.stop()
       await Sequencer.clear()
       await Sequencer.dispose()
-    }, 1000 * 30)
+    }, 1000 * 90)
   }
 
   useEffect(() => {
@@ -77,7 +86,12 @@ export default function Experiment(): JSX.Element {
   return (
     <div className='App'>
       <div className='note-wrapper'>
-        <NoteButtons notes={grid} currentColumn={currentColumn} />
+        <NoteButtons
+          notes={grid}
+          currentColumn={currentColumn}
+          isRandom={isRandom}
+          notShowing={notShowing}
+        />
       </div>
     </div>
   )
