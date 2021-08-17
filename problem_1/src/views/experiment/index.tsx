@@ -17,10 +17,10 @@ function GenerateGrid(columnsCount: number, randomness: number) {
 }
 
 export default function Experiment(): JSX.Element {
-  const [grid] = useState(useMemo(() => GenerateGrid(30, 0.9), []))
+  const [grid] = useState(useMemo(() => GenerateGrid(30, 0.85), []))
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentColumn, setCurrentColumn] = useState(null)
-  const [isRandom, setIsRandom] = useState(true)
+  const [isRandom, setIsRandom] = useState(false)
   const [notShowing, setNotShowing] = useState(false)
   const synth = new Tone.PolySynth().toDestination()
 
@@ -68,6 +68,7 @@ export default function Experiment(): JSX.Element {
 
     setTimeout(async () => {
       setNotShowing(true)
+      setIsRandom(false)
     }, 1000 * 60)
 
     setTimeout(async () => {
