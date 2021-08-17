@@ -17,7 +17,7 @@ export default function Countdown(): JSX.Element {
         <div className='w-full mt-8'>
           <button
             className='px-10 py-3 text-white rounded bg-primary'
-            onClick={() => router.push('/')}
+            onClick={() => router.replace('/')}
           >
             Go back home
           </button>

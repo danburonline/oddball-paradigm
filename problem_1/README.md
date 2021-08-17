@@ -2,6 +2,8 @@
 
 ## 🎯 Problem
 
+![Screenshot of the frontend](./img/frontend.png)
+
 Neuroimaging studies are typically small in sample size. Having a system like the IDUN Guardian EEG device would enable us to acquire data from a large population cohort. There are efforts in trying to find EEG markers that are sufficiently robust for real-world measurements. Established paradigms such as the alpha induction experiment or auditory steady state response (ASSR) have shown to be robust. Moreover, there is an interest in other validated tasks such as the so-called auditory oddball paradigm. Specifically, in the auditory oddball paradigm the user is exposed to a stream of repetitive tones (of the same frequency) where once in a while a different tone appears (in other words the oddball which has a different frequency than the sequence of repetitive tones). Interestingly, the brain reacts unconsciously to the oddball after adapting to the tone sequence even when focusing on something else (e.g., for example focusing the gaze towards a cross centered on the screen).
 
 ### The design of the experiment might look like this
@@ -33,5 +35,5 @@ Neuroimaging studies are typically small in sample size. Having a system like th
 ### Run the development server
 
 - Install all dependencies with `yarn`.
-- Start the NextJS development server with `yarn dev`.
+- Start the hot-reload NextJS development server with `yarn dev`.
 - Access the site on <http://localhost:3000>.

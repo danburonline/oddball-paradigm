@@ -2,6 +2,8 @@
 
 ## 🎯 Problem
 
+![Screenshot of the Insomnia API client](./img/insomnia.png)
+
 Now, the data that was recorded from an experiment should be transformed such that the customer/user is able to integrate them with their products. For example, one could change the volume of the TV based on your focus level measured from brain activity. For this, we would like to develop an API for the customer for her/him to access specific data. Attached you will find a file `data.json` which includes (artificial) data from subjects (or users) with a set of features (e.g., from brain signals).
 
 ## ✅ Tasks
@@ -38,6 +40,7 @@ Now, the data that was recorded from an experiment should be transformed such th
 ### Run the development server
 
 - Install all dependencies with `yarn`.
-- Start the development server `yarn dev`.
+- Compile the TypeScript code with `yarn build`.
+- Start the hot-reload development server with `yarn dev`.
 - Access the API endpoint on <http://localhost:8080/api>.
 - Import the `insomnia.yaml` file to [Insomnia](https://insomnia.rest/) to use the API.
