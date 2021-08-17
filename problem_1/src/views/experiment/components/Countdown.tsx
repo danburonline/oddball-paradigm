@@ -1,19 +1,20 @@
-import React from 'react'
+import { Dispatch, SetStateAction, memo } from 'react'
 import Countdown from 'react-countdown'
 
-type ExperimentMetaProps = {
-  // eslint-disable-next-line no-unused-vars
-  setIsCompleted: (state: boolean) => void
+type CountdownComponentProps = {
+  setIsCompleted: Dispatch<SetStateAction<boolean>>
+  duration: number
 }
 
-function ExperimentMeta(props: ExperimentMetaProps): JSX.Element {
+function CountdownComponent(props: CountdownComponentProps): JSX.Element {
   return (
     <>
       <div className='mb-20 text-white'>
         <h3>
           {`Time remaining `}
           <Countdown
-            date={Date.now() + 1000 * 60 * 2}
+            // date={Date.now() + 1000 * 60 * 2} // 2 minutes => duration of the experiment
+            date={Date.now() + props.duration}
             onComplete={() => props.setIsCompleted(true)}
           />
         </h3>
@@ -22,4 +23,5 @@ function ExperimentMeta(props: ExperimentMetaProps): JSX.Element {
   )
 }
 
-export default React.memo(ExperimentMeta)
+// Needs to be memoized due to eliminating unnecessary re-renders while counting down
+export default memo(CountdownComponent)

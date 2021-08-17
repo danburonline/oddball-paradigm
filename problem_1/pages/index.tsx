@@ -52,10 +52,7 @@ export default function Home(): JSX.Element {
             </button>
           </div>
         </main>
-        <aside
-          id='aside-image'
-          className='w-1/2 h-screen bg-black bg-center bg-no-repeat bg-hero-image'
-        ></aside>
+        <aside className='w-1/2 h-screen bg-black bg-center bg-no-repeat bg-hero-image'></aside>
       </section>
     </>
   )

@@ -3,16 +3,16 @@ import NoteButton from './NoteButton'
 import type { NoteColumn } from './NoteButton'
 import Cross from '../../../components/Cross'
 
-type NoteButtonsProps = {
+type SoundBlocksProps = {
   notes: NoteColumn[]
   currentColumn: number
   isRandom?: boolean
-  notShowing?: boolean
+  isNotShowing?: boolean
   isInvisible?: boolean
   isNotDone?: boolean
 }
 
-export default function NoteButtons(props: NoteButtonsProps): JSX.Element {
+export default function SoundBlocks(props: SoundBlocksProps): JSX.Element {
   return (
     <>
       {props.isInvisible ? (
@@ -31,7 +31,7 @@ export default function NoteButtons(props: NoteButtonsProps): JSX.Element {
               note={note}
               key={columnIndex}
               isRandom={props.isRandom}
-              notShowing={props.notShowing}
+              notShowing={props.isNotShowing}
             />
           </div>
         ))

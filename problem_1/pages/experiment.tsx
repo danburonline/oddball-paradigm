@@ -3,11 +3,13 @@ import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 
+/* The view component for the experiment page can't be server-side rendered, I
+   therefore asynchronously import it from the client. */
 const ExperimentView = dynamic(() => import('../src/views/experiment'), {
   ssr: false
 })
 
-export default function Home(): JSX.Element {
+export default function Experiment(): JSX.Element {
   const [startExperiment, setStartExperiment] = useState(false)
   const handle = useFullScreenHandle()
 
@@ -21,6 +23,7 @@ export default function Home(): JSX.Element {
         />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
+      {/* Everything inside the FullScreen component is displayed in the full-screen view */}
       <FullScreen handle={handle}>
         <main className='bg-black'>
           {startExperiment ? (
@@ -35,7 +38,7 @@ export default function Home(): JSX.Element {
               <button
                 className='p-4 text-center text-white rounded-lg cursor-pointer w-52 bg-primary hover:bg-hover'
                 onClick={() => {
-                  handle.enter()
+                  handle.enter() // Fullscreen mode
                   setStartExperiment(true)
                 }}
               >
