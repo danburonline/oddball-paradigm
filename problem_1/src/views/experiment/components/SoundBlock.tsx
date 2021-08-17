@@ -1,13 +1,13 @@
-import React from 'react'
+import { memo } from 'react'
 
-export type NoteColumn = {
+export type SoundBlockProps = {
   note: []
   isActive: boolean
   isRandom: boolean
   notShowing: boolean
 }
 
-const NoteButton = (props: NoteColumn): JSX.Element => {
+const SoundBlock = (props: SoundBlockProps): JSX.Element => {
   function getAccurateClasses(): string {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
@@ -35,4 +35,4 @@ const NoteButton = (props: NoteColumn): JSX.Element => {
   )
 }
 
-export default React.memo(NoteButton)
+export default memo(SoundBlock)

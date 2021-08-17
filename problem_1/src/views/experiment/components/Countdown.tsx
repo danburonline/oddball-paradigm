@@ -13,7 +13,6 @@ function CountdownComponent(props: CountdownComponentProps): JSX.Element {
         <h3>
           {`Time remaining `}
           <Countdown
-            // date={Date.now() + 1000 * 60 * 2} // 2 minutes => duration of the experiment
             date={Date.now() + props.duration}
             onComplete={() => props.setIsCompleted(true)}
           />

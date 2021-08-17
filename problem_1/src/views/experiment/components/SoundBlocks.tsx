@@ -1,10 +1,10 @@
 import classNames from 'classnames'
-import NoteButton from './NoteButton'
-import type { NoteColumn } from './NoteButton'
+import SoundBlock from './SoundBlock'
+import type { SoundBlockProps } from './SoundBlock'
 import Cross from '../../../components/Cross'
 
 type SoundBlocksProps = {
-  notes: NoteColumn[]
+  notes: SoundBlockProps[]
   currentColumn: number
   isRandom?: boolean
   isNotShowing?: boolean
@@ -25,7 +25,7 @@ export default function SoundBlocks(props: SoundBlocksProps): JSX.Element {
             })}
             key={columnIndex + 'column'}
           >
-            <NoteButton
+            <SoundBlock
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore
               note={note}
