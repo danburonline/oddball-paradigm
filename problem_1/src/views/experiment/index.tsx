@@ -1,6 +1,8 @@
 import { useState, useEffect, useMemo } from 'react'
 import * as Tone from 'tone'
 import NoteButtons from './components/NoteButtons'
+import Completed from './components/Completed'
+import ExperimentMeta from './components/ExperimentMeta'
 
 function GenerateGrid(columnsCount: number, randomness: number) {
   const grid = []
@@ -23,6 +25,7 @@ export default function Experiment(): JSX.Element {
   const [isRandom, setIsRandom] = useState(false)
   const [notShowing, setNotShowing] = useState(false)
   const [isInvisible, setIsInvisible] = useState(false)
+  const [isCompleted, setIsCompleted] = useState(false)
   const synth = new Tone.PolySynth().toDestination()
 
   const PlayMusic = async () => {
@@ -91,6 +94,9 @@ export default function Experiment(): JSX.Element {
 
   return (
     <div className='flex flex-col items-center justify-center w-full h-screen text-center'>
+      <ExperimentMeta setIsCompleted={setIsCompleted} />
+
+      {isCompleted && <Completed />}
       <div className='flex h-auto'>
         <NoteButtons
           notes={grid}
