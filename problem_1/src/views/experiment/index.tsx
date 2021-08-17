@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import * as Tone from 'tone'
 import NoteButtons from './components/NoteButtons'
 
-function GenerateGrid() {
+function GenerateGrid(columnsCount: number, randomness: number) {
   const grid = []
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < columnsCount; i++) {
     const d = Math.random()
-    const column = [{ note: 500, isActive: d > 0.8 ? true : false }]
+    const column = [{ note: 500, isActive: d > randomness ? true : false }]
     column.push({
       note: 200,
       isActive: column[0].isActive == true ? false : true
@@ -17,7 +17,7 @@ function GenerateGrid() {
 }
 
 export default function Experiment(): JSX.Element {
-  const [grid] = useState(GenerateGrid())
+  const [grid] = useState(useMemo(() => GenerateGrid(30, 0.8), [30, 0.8]))
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentColumn, setCurrentColumn] = useState(null)
   const synth = new Tone.PolySynth().toDestination()
@@ -77,6 +77,7 @@ export default function Experiment(): JSX.Element {
   return (
     <div className='App'>
       <div className='note-wrapper'>
+        {console.log('does this render too?')}
         <NoteButtons notes={grid} currentColumn={currentColumn} />
       </div>
     </div>
