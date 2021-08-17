@@ -4,7 +4,7 @@ export default function Countdown(): JSX.Element {
   const router = useRouter()
   return (
     <>
-      <main>
+      <main className='p-5 bg-white rounded w-72'>
         <h1>Experiment complete. Good job!</h1>
         <button onClick={() => router.push('/')}>Go back home</button>
         <button

@@ -48,7 +48,7 @@ class CustomDocument extends Document {
           />
           <link rel='manifest' href='/site.webmanifest' />
         </Head>
-        <body>
+        <body className='bg-black'>
           <Main />
           <NextScript />
         </body>

@@ -2,8 +2,9 @@ import { useState, useEffect, useMemo } from 'react'
 import * as Tone from 'tone'
 import NoteButtons from './components/NoteButtons'
 import Completed from './components/Completed'
-import ExperimentMeta from './components/ExperimentMeta'
+import ExperimentMeta from './components/Countdown'
 import Confetti from '../../../src/components/Confetti'
+import { useRouter } from 'next/router'
 
 function GenerateGrid(columnsCount: number, randomness: number) {
   const grid = []
@@ -28,7 +29,9 @@ export default function Experiment(): JSX.Element {
   const [isInvisible, setIsInvisible] = useState(false)
   const [isCompleted, setIsCompleted] = useState(false)
   const [isNotDone, setIsNotDone] = useState(true)
+  const [showCross, setShowCross] = useState(false)
   const synth = new Tone.PolySynth().toDestination()
+  const router = useRouter()
 
   const PlayMusic = async () => {
     const music = []
@@ -64,7 +67,7 @@ export default function Experiment(): JSX.Element {
 
       return
     }
-    setIsPlaying(true)
+
     await Sequencer.start()
     await Tone.Transport.start()
 
@@ -78,6 +81,7 @@ export default function Experiment(): JSX.Element {
     }, 1000 * 60)
 
     setTimeout(async () => {
+      setShowCross(true)
       setIsInvisible(true)
     }, 1000 * 90)
 
@@ -92,19 +96,35 @@ export default function Experiment(): JSX.Element {
   }
 
   useEffect(() => {
-    PlayMusic()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+    // TODO Find a better solution for a cleanup work
+    router.pathname === '/experiment' ? PlayMusic() : null
+    return () => {
+      Tone.Transport.stop()
+    }
+  }, [router])
 
   return (
-    <div className='flex flex-col items-center justify-center w-full h-screen text-center'>
+    <div className='flex flex-col items-center justify-center w-full h-screen text-center bg-black'>
       {isCompleted ? (
         <>
           <Completed />
           <Confetti />
         </>
       ) : (
-        <ExperimentMeta setIsCompleted={setIsCompleted} />
+        <>
+          {!showCross ? (
+            <h2 className='text-white'>
+              <b>
+                Follow the yellow sound indicator, sit still and concentrate.
+              </b>
+            </h2>
+          ) : (
+            <h2 className='text-white'>
+              <b>Concentrate on the cross.</b>
+            </h2>
+          )}
+          <ExperimentMeta setIsCompleted={setIsCompleted} />
+        </>
       )}
       <div className='flex h-auto'>
         <NoteButtons

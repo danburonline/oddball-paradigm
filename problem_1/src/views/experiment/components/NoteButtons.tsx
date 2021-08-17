@@ -21,7 +21,7 @@ export default function NoteButtons(props: NoteButtonsProps): JSX.Element {
         props.notes.map((note, columnIndex) => (
           <div
             className={classNames('flex flex-col', {
-              'bg-black': props.currentColumn === columnIndex
+              'bg-yellow-400 rounded-sm': props.currentColumn === columnIndex
             })}
             key={columnIndex + 'column'}
           >

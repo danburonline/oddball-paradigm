@@ -4,11 +4,12 @@ module.exports = {
   theme: {
     backgroundColor: theme => ({
       ...theme('colors'),
-      primary: '#2a8c7a', // From the IDUN website
+      primary: '#2A8C7A', // From the IDUN website
       hover: '#216d5f' // Defined this on my own
     }),
     textColor: {
-      primary: '#2a8c7a',
+      primary: '#2A8C7A',
+      hover: '#216d5f',
       white: '#fff',
       black: '#000'
     },

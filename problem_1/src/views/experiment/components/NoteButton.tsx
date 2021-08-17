@@ -12,14 +12,14 @@ const NoteButton = (props: NoteColumn): JSX.Element => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     return !props.note[1].isActive
-      ? 'h-20 w-10 rounded-sm m-1 cursor-pointer border-2 border-indigo-600 bg-red'
-      : 'h-20 w-10 bg-white rounded-sm m-1 cursor-pointer border-2 border-indigo-600'
+      ? 'h-20 w-10 rounded-sm m-1 bg-primary'
+      : 'h-20 w-10 bg-white rounded-sm m-1 bg-white'
   }
 
   function getRandomClasses(): string {
     return Math.random() > 0.8
-      ? 'h-20 w-10 rounded-sm m-1 cursor-pointer border-2 border-indigo-600 bg-red'
-      : 'h-20 w-10 bg-white rounded-sm m-1 cursor-pointer border-2 border-indigo-600'
+      ? 'h-20 w-10 rounded-sm m-1 bg-primary'
+      : 'h-20 w-10 bg-white rounded-sm m-1 bg-white'
   }
 
   return (
@@ -28,7 +28,7 @@ const NoteButton = (props: NoteColumn): JSX.Element => {
         props.isRandom
           ? getRandomClasses()
           : props.notShowing
-          ? 'h-20 w-10 bg-white rounded-sm m-1 cursor-pointer border-2 border-indigo-600'
+          ? 'h-20 w-10 bg-white rounded-sm m-1'
           : getAccurateClasses()
       }
     ></div>
