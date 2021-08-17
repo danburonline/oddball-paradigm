@@ -14,12 +14,14 @@ export default function generateSoundGrid(
   for (let i = 0; i < gridCount; i++) {
     const d = Math.random()
     const column: TGenerateSoundGrid = [
-      { note: highTone, isActive: d > randomness ? true : false }
+      { note: highTone, isActive: d > randomness }
     ]
+
     column.push({
       note: lowTone,
-      isActive: column[0].isActive == true ? false : true
+      isActive: column[0].isActive != true
     })
+
     soundData.push(column)
   }
 

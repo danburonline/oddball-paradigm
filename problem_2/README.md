@@ -40,7 +40,6 @@ Now, the data that was recorded from an experiment should be transformed such th
 ### Run the development server
 
 - Install all dependencies with `yarn`.
-- Compile the TypeScript code with `yarn build`.
 - Start the hot-reload development server with `yarn dev`.
 - Access the API endpoint on <http://localhost:8080/api>.
 - Import the `insomnia.yaml` file to [Insomnia](https://insomnia.rest) to use the API.

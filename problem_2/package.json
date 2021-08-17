@@ -8,7 +8,7 @@
   },
   "author": "Daniel Burger",
   "scripts": {
-    "dev": "nodemon src/index.ts",
+    "dev": "tsc && nodemon",
     "build": "tsc",
     "start": "export NODE_CONFIG_DIR=./src/config && node dist/server.js",
     "format": "prettier -w .",

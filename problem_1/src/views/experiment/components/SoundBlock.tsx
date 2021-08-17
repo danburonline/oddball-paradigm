@@ -7,19 +7,21 @@ export type SoundBlockProps = {
   notShowing: boolean
 }
 
-const SoundBlock = (props: SoundBlockProps): JSX.Element => {
+function SoundBlock(props: SoundBlockProps): JSX.Element {
+  const STANDARD_STYLES = 'h-20 w-10 rounded-sm m-1'
+
   function getAccurateClasses(): string {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    return !props.note[1].isActive
-      ? 'h-20 w-10 rounded-sm m-1 bg-primary'
-      : 'h-20 w-10 bg-white rounded-sm m-1 bg-white'
+    return props.note[1].isActive
+      ? `${STANDARD_STYLES} bg-white`
+      : `${STANDARD_STYLES} bg-primary`
   }
 
   function getRandomClasses(): string {
     return Math.random() > 0.8
-      ? 'h-20 w-10 rounded-sm m-1 bg-primary'
-      : 'h-20 w-10 bg-white rounded-sm m-1 bg-white'
+      ? `${STANDARD_STYLES} bg-primary`
+      : `${STANDARD_STYLES} bg-white`
   }
 
   return (
@@ -28,11 +30,12 @@ const SoundBlock = (props: SoundBlockProps): JSX.Element => {
         props.isRandom
           ? getRandomClasses()
           : props.notShowing
-          ? 'h-20 w-10 bg-white rounded-sm m-1'
+          ? `${STANDARD_STYLES} bg-white`
           : getAccurateClasses()
       }
-    ></div>
+    />
   )
 }
 
+// Needs to be memoized due to eliminating unnecessary re-renders while the styles change
 export default memo(SoundBlock)

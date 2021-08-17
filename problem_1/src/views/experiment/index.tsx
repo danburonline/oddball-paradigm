@@ -108,8 +108,6 @@ export default function Experiment(): JSX.Element {
     return () => {
       Tone.Transport.stop()
     }
-    // Suppress a TSC error (part of the TODO above)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router])
 
   return (
