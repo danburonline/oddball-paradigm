@@ -14,7 +14,7 @@ There are several main tasks to complete this assessment:
 
 ### Frontend/Oddball experiment
 
-- [ ] Implement a frontend Oddball experiment with Sound.js.
+- [x] Implement a frontend Oddball experiment with Sound.js.
 - [x] Create wireframes for the experiment/research design.
 - [x] Instructions 1–2 sentences.
 
@@ -37,7 +37,7 @@ There are several main tasks to complete this assessment:
 - [x] Simple screen designs (desktop and mobile).
 - [x] Logging on the backend.
 - [x] CORS on the backend.
-- [ ] Simple frontend responsiveness.
+- [ ] Simple frontend responsiveness _(wip, not done)._
 - [ ] Jest backend unit tests.
 - [ ] Cypress frontend tests.
 - [ ] Global state management on the frontend (Zustand).
