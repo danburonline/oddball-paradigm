@@ -5,7 +5,7 @@
 In the final step, we would like to design a demo space for customers to present our neuro intelligence platform. The aim is to demonstrate the IDUN full-stack product. Consider the following:
 
 - You have unlimited resources and can include any technology that you deem relevant to highlight the product
-- You don’t need to restrict yourself
+- You don't need to restrict yourself
 
 ## ✅ Tasks
 
@@ -16,15 +16,15 @@ In the final step, we would like to design a demo space for customers to present
 
 ![Visualisation of how two people are playing the Mind Racing game with their IDUN DRYODE Guardian BCI](./img/mindracing.jpeg)
 
-I would set up a digital demo room with the results of a BCI/IDUN DRYODE Guardian Hackathon: developers/engineers/tinkers with a wide range of skills and experience create different applicable products using the IDUN BCI, Brain API and/or IDUN Software Stack. These people compete against each other, and the most innovative technologies and ideas are chosen as winners. The winning ideas will be presented on the Neurointelligence platform as live demo products.
+I would set up a digital demo room with the results of a BCI/IDUN DRYODE Guardian Hackathon: developers/engineers/tinkers with a wide range of skills and experience create different applicable products using the IDUN BCI, Brain API and/or IDUN Software Stack. These people compete against each other, and the most innovative technologies and ideas are chosen as winners. The winner-ideas will be presented on the Neurointelligence platform as live demo products.
 
 The idea for my Bachelor project could be a possible result of such a hackathon: Mind Racing, a web-based 3D racing game that you can control only with your thoughts. Users can compete with each other via the Mind Racing website and race against users worldwide in real-time. The goal is to steer a 3D figure through a path with obstacles (similar to TempleRun). If you bump into an obstacle, you lose speed. There is also a public leaderboard with the highest scores and other gamification factors.
 
 This demo product is an example that perfectly demonstrates a potential use case for the gaming industry and web accessibility. It is also a practical and fun way to illustrate the Internet of Humans, where we can connect each other's brains to achieve goals (even if as simple as having fun playing a game). When marketed as a sub-brand of IDUN as "one of the demos on our neurointelligence platform", it will be one of the possible – even award-winning – demo products that will attract customers, potential clients, investors, and fans (I compare this idea to the growing game developer traction inside Tesla cars e.g.).
 
-![Visualisation of a person in a IDUN showroom/living room with a standing light, a TV and a toy racing car](./img/showroom.jpeg)
+![Visualisation of a person in an IDUN showroom/living room with a standing light, a TV and a toy racing car](./img/showroom.jpeg)
 
-**Additionally:** To make these demo products more accessible, I would create walkthroughs and an on-site demo room with provided Guardian BCIs for visitors (like the VR room or demo space in the SAE Institute). E.g.: A fully connected smart home (lights, fans, smart mirror, etc.) that adapts to the user's mental state and control.
+**Additionally:** To make these demo products more accessible, I would create walkthroughs and an on-site demo room with provided Guardian BCIs for visitors (like the VR room or demo space in the SAE Institute). E.g., a fully connected smart home (lights, fans, smart mirror, etc.) that adapts to the user's mental state and control.
 
 ---
 

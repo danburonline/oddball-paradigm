@@ -12,7 +12,7 @@ Now, the data that was recorded from an experiment should be transformed such th
 - [x] Implement a REST/GraphQL API (any language) in order to enable CRUD operations and test functionality:
   - [x] List feature 2 for all subjects
   - [x] Get feature 1 for subject 52
-  - [x] Edit all features for subject 11 to 1
+  - [x] Edit all features for subjects 11 to 1
 - [x] Demonstrate the usage of HTTP responses with codes: 200, 404, 500
 - [x] Describe the steps on how you want to deploy your application
 - [x] What do you consider relevant factors for the design of a scalable API design? (1 or 2 sentences)
@@ -21,7 +21,7 @@ Now, the data that was recorded from an experiment should be transformed such th
 
 **Q:** Describe the steps on how you want to deploy your application[?]
 
-**A:** So far, everything is simply containerised via Docker, so it can all be deployed to any cloud computing provider that supports Docker image deployment. I prefer to deploy it on Google Cloud Platform Cloud Run, as that's where I've had the smoothest experience. The MongoDB database is also currently just a free sandbox tier; I would turn it into a production-ready tier on GCP to easily connect the two services. Currently, it is also possible to access the database from any IP address; I would need to change that to a more secure way with limited access. The most simple form of deployment that I would utilise at this moment with this scope would be an CI/CD workflow with automated unit and E2E tests via GitHub Actions. If the pipelines pass, the Docker images will get deployed to a Google Container Registry.
+**A:** So far, everything is simply containerised via Docker, so it can all be deployed to any cloud computing provider that supports Docker image deployment. I prefer to deploy it on Google Cloud Platform Cloud Run, as that's where I've had the smoothest experience. The MongoDB database is currently just a free sandbox tier; I would turn it into a production-ready tier on GCP to connect the two services easily. Currently, it is also possible to access the database from any IP address; I would need to change that to a more secure way with limited access. The most simple form of deployment that I would utilise at this moment with this scope would be a CI/CD workflow with automated unit and E2E tests via GitHub Actions. If the pipelines pass, the Docker images will get deployed to a Google Container Registry.
 
 ---
 
@@ -53,7 +53,7 @@ Now, the data that was recorded from an experiment should be transformed such th
 
 ## 🧩 Remarks
 
-- Be sure that the `problem_2` directory has a `.env` file with the following variables: `PORT` and `DB_URI`. If you don't provide these environment variables the `Dockerfile` as well as the compilation process won't work.
-- If you compile the backend with `yarn build`, you will get a `dist` folder with the compiled code and a `logs` folder with the logs.
+- Be sure that the `problem_2` directory has a `.env` file with the following variables: `PORT` and `DB_URI`. If you don't provide these environment variables, the `Dockerfile` and the compilation process won't work.
+- If you compile the backend with `yarn build`, you will get a `/dist` folder with the compiled code and a `/logs` folder with the logs.
 - There are some edge cases where the API doesn't work as expected. So far I've implemented the most critical features for a working example REST API.
-- For a small documentation I recommend just downloading Insomnia and importing the `insomnia.yaml` file. It gives you a good overview for all the endpoints.
+- For a small documentation, I recommend downloading Insomnia and importing the `insomnia.yaml` file. It gives you a good overview of all the endpoints.

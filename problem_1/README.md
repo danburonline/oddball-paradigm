@@ -8,14 +8,14 @@ Neuroimaging studies are typically small in sample size. Having a system like th
 
 ### The design of the experiment might look like this
 
-- Total duration of experiment: 2 minutes
+- Total duration of the experiment: 2 minutes
 - Two tones with different frequencies (e.g., 200 Hz and 500 Hz) and tone duration: 60 ms
 - The appearance of the oddballs happens at random time points
 
 ## ✅ Tasks
 
 - [x] Sketch the experiment graphically
-- [x] Design and implement the experimental task in a webApp using any frontend web development frameworks, the experiment starts with a button press and ends after 2 minutes with the screen text “Experiment complete”
+- [x] Design and implement the experimental task in a web app using any frontend web development frameworks; the experiment starts with a button press and ends after 2 minutes with the screen text “Experiment complete.”
 - [x] What do you think is important for designing an experiment when you care about excellent signal quality? (1 or 2 sentences)
 
 ### Question and answer
@@ -49,5 +49,5 @@ Neuroimaging studies are typically small in sample size. Having a system like th
 ## 🧩 Remarks
 
 - The frontend has only been tested on a MacBook Pro with macOS Big Sur 11.5.2 inside the Brave, Chromium and Edge browsers.
-- There are still some issues with the Synthesizer cleanup when you leave the experiment page => would need some rework.
-- The frontend has been optimised for a 15 inch retina display. Have a look at the screen designs for the mobile version.
+- There are still some issues with the synthesiser clean up when you leave the experiment page => would need some rework.
+- The frontend has been optimised for a 15-inch retina display. Have a look at the screen designs for the mobile version.
