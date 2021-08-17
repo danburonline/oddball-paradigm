@@ -1,14 +1,14 @@
 import { useState, useEffect, useMemo } from 'react'
 import * as Tone from 'tone'
-import classNames from 'classnames'
+import NoteButtons from './components/NoteButtons'
 
 function GenerateGrid(columnsCount: number, randomness: number) {
   const grid = []
   for (let i = 0; i < columnsCount; i++) {
     const d = Math.random()
-    const column = [{ note: 500, isActive: d > randomness ? true : false }]
+    const column = [{ note: 600, isActive: d > randomness ? true : false }]
     column.push({
-      note: 200,
+      note: 400,
       isActive: column[0].isActive == true ? false : true
     })
     grid.push(column)
@@ -17,7 +17,7 @@ function GenerateGrid(columnsCount: number, randomness: number) {
 }
 
 export default function Experiment(): JSX.Element {
-  const [grid] = useState(useMemo(() => GenerateGrid(30, 0.8), [30, 0.8]))
+  const [grid] = useState(useMemo(() => GenerateGrid(30, 0.9), [30, 0.9]))
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentColumn, setCurrentColumn] = useState(null)
   const synth = new Tone.PolySynth().toDestination()
@@ -77,27 +77,9 @@ export default function Experiment(): JSX.Element {
   return (
     <div className='App'>
       <div className='note-wrapper'>
-        {grid.map(({ note, isActive }, columnIndex) => (
-          <div
-            className={classNames('note-column', {
-              'note-column--active': currentColumn === columnIndex
-            })}
-            key={columnIndex + 'column'}
-          >
-            {console.log(note)}
-            <NoteButton note={note} isActive={isActive} key={columnIndex} />
-          </div>
-        ))}
+        {console.log('does this render too?')}
+        <NoteButtons notes={grid} currentColumn={currentColumn} />
       </div>
     </div>
-  )
-}
-
-const NoteButton = ({ note, isActive, ...rest }) => {
-  const classes = isActive ? 'note note--active' : 'note'
-  return (
-    <button className={classes} {...rest}>
-      {note}
-    </button>
   )
 }
