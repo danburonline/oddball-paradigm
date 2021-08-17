@@ -17,7 +17,7 @@ function GenerateGrid(columnsCount: number, randomness: number) {
 }
 
 export default function Experiment(): JSX.Element {
-  const [grid] = useState(useMemo(() => GenerateGrid(30, 0.9), [30, 0.9]))
+  const [grid] = useState(useMemo(() => GenerateGrid(30, 0.9), []))
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentColumn, setCurrentColumn] = useState(null)
   const synth = new Tone.PolySynth().toDestination()
@@ -66,7 +66,7 @@ export default function Experiment(): JSX.Element {
       await Sequencer.stop()
       await Sequencer.clear()
       await Sequencer.dispose()
-    }, 30000)
+    }, 1000 * 30)
   }
 
   useEffect(() => {
@@ -77,7 +77,6 @@ export default function Experiment(): JSX.Element {
   return (
     <div className='App'>
       <div className='note-wrapper'>
-        {console.log('does this render too?')}
         <NoteButtons notes={grid} currentColumn={currentColumn} />
       </div>
     </div>
