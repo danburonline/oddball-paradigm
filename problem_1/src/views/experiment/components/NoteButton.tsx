@@ -31,4 +31,4 @@ const NoteButton = (props: NoteColumn): JSX.Element => {
   )
 }
 
-export default NoteButton
+export default React.memo(NoteButton)
