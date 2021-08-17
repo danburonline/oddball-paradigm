@@ -22,6 +22,7 @@ export default function Experiment(): JSX.Element {
   const [currentColumn, setCurrentColumn] = useState(null)
   const [isRandom, setIsRandom] = useState(false)
   const [notShowing, setNotShowing] = useState(false)
+  const [isInvisible, setIsInvisible] = useState(false)
   const synth = new Tone.PolySynth().toDestination()
 
   const PlayMusic = async () => {
@@ -72,11 +73,15 @@ export default function Experiment(): JSX.Element {
     }, 1000 * 60)
 
     setTimeout(async () => {
+      setIsInvisible(true)
+    }, 1000 * 90)
+
+    setTimeout(async () => {
       await Tone.Transport.stop()
       await Sequencer.stop()
       await Sequencer.clear()
       await Sequencer.dispose()
-    }, 1000 * 90)
+    }, 1000 * 120)
   }
 
   useEffect(() => {
@@ -92,6 +97,7 @@ export default function Experiment(): JSX.Element {
           currentColumn={currentColumn}
           isRandom={isRandom}
           notShowing={notShowing}
+          isInvisible={isInvisible}
         />
       </div>
     </div>
