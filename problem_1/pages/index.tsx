@@ -37,7 +37,7 @@ export default function Home(): JSX.Element {
           </ul>
           <div
             aria-roledescription='button'
-            onClick={() => router.push('/experiment')}
+            onClick={() => router.push('/oddball-experiment')}
           >
             Start experiment
           </div>

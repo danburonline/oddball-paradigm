@@ -1,40 +1,26 @@
 import { useState, useEffect } from 'react'
 import * as Tone from 'tone'
-import classNames from 'classnames'
+import NoteButtons from './components/NoteButtons'
 
 function GenerateGrid() {
   const grid = []
   for (let i = 0; i < 30; i++) {
-    const column = [
-      { note: 500, isActive: false },
-      { note: 200, isActive: true }
-    ]
+    const d = Math.random()
+    const column = [{ note: 500, isActive: d > 0.8 ? true : false }]
+    column.push({
+      note: 200,
+      isActive: column[0].isActive == true ? false : true
+    })
     grid.push(column)
   }
   return grid
 }
 
 export default function Experiment(): JSX.Element {
-  const [grid, setGrid] = useState(GenerateGrid())
+  const [grid] = useState(GenerateGrid())
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentColumn, setCurrentColumn] = useState(null)
   const synth = new Tone.PolySynth().toDestination()
-
-  function handleNoteClick(clickedColumn, clickedNote) {
-    const updatedGrid = grid.map((column, columnIndex) =>
-      column.map((cell, cellIndex) => {
-        const cellCopy = cell
-
-        if (columnIndex === clickedColumn && cellIndex === clickedNote) {
-          cellCopy.isActive = !cell.isActive
-        }
-
-        return cellCopy
-      })
-    )
-
-    setGrid(updatedGrid)
-  }
 
   const PlayMusic = async () => {
     const music = []
@@ -73,6 +59,14 @@ export default function Experiment(): JSX.Element {
     setIsPlaying(true)
     await Sequencer.start()
     await Tone.Transport.start()
+
+    // stop the sounds after after 30 seconds
+    setTimeout(async () => {
+      await Tone.Transport.stop()
+      await Sequencer.stop()
+      await Sequencer.clear()
+      await Sequencer.dispose()
+    }, 30000)
   }
 
   useEffect(() => {
@@ -83,33 +77,8 @@ export default function Experiment(): JSX.Element {
   return (
     <div className='App'>
       <div className='note-wrapper'>
-        {grid.map((column, columnIndex) => (
-          <div
-            className={classNames('note-column', {
-              'note-column--active': currentColumn === columnIndex
-            })}
-            key={columnIndex + 'column'}
-          >
-            {column.map(({ note, isActive }, noteIndex) => (
-              <NoteButton
-                note={note}
-                isActive={isActive}
-                onClick={() => handleNoteClick(columnIndex, noteIndex)}
-                key={note + columnIndex}
-              />
-            ))}
-          </div>
-        ))}
+        <NoteButtons notes={grid} currentColumn={currentColumn} />
       </div>
     </div>
-  )
-}
-
-const NoteButton = ({ note, isActive, ...rest }) => {
-  const classes = isActive ? 'note note--active' : 'note'
-  return (
-    <button className={classes} {...rest}>
-      {note}
-    </button>
   )
 }

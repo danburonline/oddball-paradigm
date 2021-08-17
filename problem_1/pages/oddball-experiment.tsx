@@ -21,7 +21,7 @@ export default function Home(): JSX.Element {
         <h3>
           <b>Time remaining</b>
         </h3>
-        <Countdown date={Date.now() + 100000} />
+        <Countdown date={Date.now() + 1000 * 60 * 1.5} />
         <ExperimentView />
       </main>
     </>
