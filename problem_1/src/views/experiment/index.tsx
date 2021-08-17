@@ -90,8 +90,8 @@ export default function Experiment(): JSX.Element {
   }, [])
 
   return (
-    <div className='App'>
-      <div className='note-wrapper'>
+    <div className='flex flex-col items-center justify-center w-full h-screen text-center'>
+      <div className='flex h-auto'>
         <NoteButtons
           notes={grid}
           currentColumn={currentColumn}
