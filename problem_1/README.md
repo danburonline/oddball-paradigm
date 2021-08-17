@@ -2,7 +2,7 @@
 
 ## 🎯 Problem
 
-![Screenshot of the frontend](./img/frontend.png)
+![Screenshot of the frontend experiment](./img/frontend.png)
 
 Neuroimaging studies are typically small in sample size. Having a system like the IDUN Guardian EEG device would enable us to acquire data from a large population cohort. There are efforts in trying to find EEG markers that are sufficiently robust for real-world measurements. Established paradigms such as the alpha induction experiment or auditory steady state response (ASSR) have shown to be robust. Moreover, there is an interest in other validated tasks such as the so-called auditory oddball paradigm. Specifically, in the auditory oddball paradigm the user is exposed to a stream of repetitive tones (of the same frequency) where once in a while a different tone appears (in other words the oddball which has a different frequency than the sequence of repetitive tones). Interestingly, the brain reacts unconsciously to the oddball after adapting to the tone sequence even when focusing on something else (e.g., for example focusing the gaze towards a cross centered on the screen).
 
@@ -22,7 +22,7 @@ Neuroimaging studies are typically small in sample size. Having a system like th
 
 **Q:** What do you think is important for designing an experiment when you care about excellent signal quality?
 
-**A:** I think it is important that the experiment is well explained with clear and precise instructions beforehand. The signal should preferably not contain noise from other stimuli, so I value a simple user interface without distracting elements and full-screen functionality during the experiment. From a technical point of view, I would say that it is essential that no computationally intensive tasks are performed on the client-side, as the server is the only place where the data is processed with the guarantee that it will be computed in the same way every time.
+**A:** I think it is important that the experiment is well explained with clear and precise instructions beforehand. The signal should preferably not contain noise from other stimuli, so I value a simple user interface without distracting elements and full-screen functionality during the experiment. From a technical point of view, I would say that it is essential that no computationally-intensive tasks are performed on the client-side, as the server is the only place where the data is processed with the guarantee that it will be computed in the same way every time.
 
 ## 🚀 Guides
 
@@ -48,6 +48,6 @@ Neuroimaging studies are typically small in sample size. Having a system like th
 
 ## 🧩 Remarks
 
-- The frontend has only been tested on a MacBook Pro with macOS Big Sur 11.5.2 inside the Brave, Chromium and Edge browsers.
-- There are still some issues with the synthesiser clean up when you leave the experiment page => would need some rework.
+- The frontend has only been tested on a MacBook Pro with macOS Big Sur 11.5.2 inside Brave, Chromium and Edge browsers.
 - The frontend has been optimised for a 15-inch retina display. Have a look at the screen designs for the mobile version.
+- There are still some issues with the synthesiser clean-up while an user leaves the experiment page => would need some rework.

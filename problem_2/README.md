@@ -21,7 +21,7 @@ Now, the data that was recorded from an experiment should be transformed such th
 
 **Q:** Describe the steps on how you want to deploy your application[?]
 
-**A:** So far, everything is simply containerised via Docker, so it can all be deployed to any cloud computing provider that supports Docker image deployment. I prefer to deploy it on Google Cloud Platform Cloud Run, as that's where I've had the smoothest experience. The MongoDB database is currently just a free sandbox tier; I would turn it into a production-ready tier on GCP to connect the two services easily. Currently, it is also possible to access the database from any IP address; I would need to change that to a more secure way with limited access. The most simple form of deployment that I would utilise at this moment with this scope would be a CI/CD workflow with automated unit and E2E tests via GitHub Actions. If the pipelines pass, the Docker images will get deployed to a Google Container Registry.
+**A:** So far, everything is simply containerised via Docker, so it can all be deployed to any cloud computing provider that supports Docker image deployment. I prefer to deploy it on Google Cloud Platform Cloud Run, as that's where I've had the smoothest experience. The MongoDB database is currently just a free sandbox tier; I would turn it into a production-ready tier on GCP to easily connect the two services. Currently, it is also possible to access the database from any IP address; I would need to change that to a more secure way with limited access. The most simple form of deployment that I would utilise at this moment with this scope would be a CI/CD workflow with automated unit and E2E tests via GitHub Actions. If the pipelines pass, the Docker images will get deployed to a Google Container Registry.
 
 ---
 
@@ -54,5 +54,5 @@ Now, the data that was recorded from an experiment should be transformed such th
 
 - Be sure that the `problem_2` directory has a `.env` file with the following variables: `PORT` and `DB_URI`. If you don't provide these environment variables, the `Dockerfile` and the compilation process won't work.
 - If you compile the backend with `yarn build`, you will get a `/dist` folder with the compiled code and a `/logs` folder with the logs.
-- There are some edge cases where the API doesn't work as expected. So far I've implemented the most critical features for a working example REST API.
+- There are some edge cases where the API doesn't work as expected (especially in regards to error handling and response codes). So far I've implemented the most critical features for a working example REST API.
 - For a small documentation, I recommend downloading Insomnia and importing the `insomnia.yaml` file. It gives you a good overview of all the endpoints.
