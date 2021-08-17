@@ -3,6 +3,7 @@ import * as Tone from 'tone'
 import NoteButtons from './components/NoteButtons'
 import Completed from './components/Completed'
 import ExperimentMeta from './components/ExperimentMeta'
+import Confetti from '../../../src/components/Confetti'
 
 function GenerateGrid(columnsCount: number, randomness: number) {
   const grid = []
@@ -26,6 +27,7 @@ export default function Experiment(): JSX.Element {
   const [notShowing, setNotShowing] = useState(false)
   const [isInvisible, setIsInvisible] = useState(false)
   const [isCompleted, setIsCompleted] = useState(false)
+  const [isNotDone, setIsNotDone] = useState(true)
   const synth = new Tone.PolySynth().toDestination()
 
   const PlayMusic = async () => {
@@ -80,6 +82,8 @@ export default function Experiment(): JSX.Element {
     }, 1000 * 90)
 
     setTimeout(async () => {
+      setIsNotDone(false)
+      setIsInvisible(false)
       await Tone.Transport.stop()
       await Sequencer.stop()
       await Sequencer.clear()
@@ -94,9 +98,14 @@ export default function Experiment(): JSX.Element {
 
   return (
     <div className='flex flex-col items-center justify-center w-full h-screen text-center'>
-      <ExperimentMeta setIsCompleted={setIsCompleted} />
-
-      {isCompleted && <Completed />}
+      {isCompleted ? (
+        <>
+          <Completed />
+          <Confetti />
+        </>
+      ) : (
+        <ExperimentMeta setIsCompleted={setIsCompleted} />
+      )}
       <div className='flex h-auto'>
         <NoteButtons
           notes={grid}
@@ -104,6 +113,7 @@ export default function Experiment(): JSX.Element {
           isRandom={isRandom}
           notShowing={notShowing}
           isInvisible={isInvisible}
+          isNotDone={isNotDone}
         />
       </div>
     </div>

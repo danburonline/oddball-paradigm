@@ -2,7 +2,7 @@ export default function Countdown(): JSX.Element {
   return (
     <>
       <main>
-        <h1>Completed</h1>
+        <h1>Experiment complete. Good job!</h1>
       </main>
     </>
   )

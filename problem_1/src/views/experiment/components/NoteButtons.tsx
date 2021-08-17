@@ -9,6 +9,7 @@ type NoteButtonsProps = {
   isRandom?: boolean
   notShowing?: boolean
   isInvisible?: boolean
+  isNotDone?: boolean
 }
 
 export default function NoteButtons(props: NoteButtonsProps): JSX.Element {
@@ -16,7 +17,7 @@ export default function NoteButtons(props: NoteButtonsProps): JSX.Element {
     <>
       {props.isInvisible ? (
         <Cross />
-      ) : (
+      ) : props.isNotDone ? (
         props.notes.map((note, columnIndex) => (
           <div
             className={classNames('flex flex-col', {
@@ -34,7 +35,7 @@ export default function NoteButtons(props: NoteButtonsProps): JSX.Element {
             />
           </div>
         ))
-      )}
+      ) : null}
     </>
   )
 }
