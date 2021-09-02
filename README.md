@@ -37,7 +37,7 @@ There are several main tasks to complete this assessment:
 - [x] Simple screen designs (desktop and mobile).
 - [x] Logging on the backend.
 - [x] CORS on the backend.
-- [ ] Simple frontend responsiveness _(WIP => not done)._
+- [ ] Simple frontend responsiveness
 - [ ] Jest backend unit tests.
 - [ ] Cypress frontend E2E tests.
 - [ ] Global state management on the frontend (with Zustand).
