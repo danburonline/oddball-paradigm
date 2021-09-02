@@ -1,4 +1,6 @@
-# IDUN Full-Stack Engineer Assessment
+# Full-Stack Engineer Assessment
+
+![README banner](readme-banner.png)
 
 ## Introduction
 
